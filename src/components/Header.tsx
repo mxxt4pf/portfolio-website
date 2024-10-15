@@ -1,18 +1,21 @@
 import React from 'react';
+import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
 
 const Header: React.FC = () => {
   return (
-    <header>
-      <h1>Your Name</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <AppBar position="static" color="primary" sx={{ mb: 4 }}>
+      <Toolbar>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          Your Name
+        </Typography>
+        <Box>
+          <Button color="inherit" href="#about">About</Button>
+          <Button color="inherit" href="#projects">Projects</Button>
+          <Button color="inherit" href="#skills">Skills</Button>
+          <Button color="inherit" href="#contact">Contact</Button>
+        </Box>
+      </Toolbar>
+    </AppBar>
   );
 };
 

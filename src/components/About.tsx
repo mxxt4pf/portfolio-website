@@ -1,11 +1,17 @@
 import React from 'react';
+import { Typography, Paper } from '@mui/material';
 
 const About: React.FC = () => {
   return (
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Here's a brief introduction about yourself and your background.</p>
-    </section>
+    <Paper elevation={3} sx={{ p: 3, mb: 4 }}>
+      <Typography variant="h4" component="h2" gutterBottom>
+        About Me
+      </Typography>
+      <Typography variant="body1">
+        Here's a brief introduction about yourself and your background. Highlight your passion for technology,
+        your key skills, and what drives you as a developer.
+      </Typography>
+    </Paper>
   );
 };
 

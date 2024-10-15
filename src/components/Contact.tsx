@@ -1,25 +1,42 @@
 import React from 'react';
+import { Typography, TextField, Button, Paper, Box } from '@mui/material';
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <form>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-        </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-        <div>
-          <label htmlFor="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-        <button type="submit">Send</button>
-      </form>
-    </section>
+    <Paper elevation={3} sx={{ p: 3 }}>
+      <Typography variant="h4" component="h2" gutterBottom>
+        Contact Me
+      </Typography>
+      <Box component="form" noValidate autoComplete="off" sx={{ mt: 2 }}>
+        <TextField
+          fullWidth
+          label="Name"
+          variant="outlined"
+          margin="normal"
+          required
+        />
+        <TextField
+          fullWidth
+          label="Email"
+          variant="outlined"
+          margin="normal"
+          required
+          type="email"
+        />
+        <TextField
+          fullWidth
+          label="Message"
+          variant="outlined"
+          margin="normal"
+          required
+          multiline
+          rows={4}
+        />
+        <Button variant="contained" color="primary" sx={{ mt: 2 }}>
+          Send
+        </Button>
+      </Box>
+    </Paper>
   );
 };
 
